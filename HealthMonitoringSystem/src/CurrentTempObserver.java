@@ -1,4 +1,3 @@
-import java.util.Observable;
 
 public class CurrentTempObserver implements Observer, DisplayElement {
     private int temperature;
@@ -9,6 +8,7 @@ public class CurrentTempObserver implements Observer, DisplayElement {
     }
     public void update(int heartRate, int temperature, int airFlow){
         this.temperature = temperature;
+        display();
     }
     public void display() {
         System.out.println("Current temperature: " + temperature);

@@ -22,6 +22,7 @@ public class SensorData implements Subject{
         for(Observer observer:observers){
             observer.update(heartRate,temperature,airFlow);
         }
+        System.out.println();
     }
     public void measurmentsChanged(){
         notifyObservers();

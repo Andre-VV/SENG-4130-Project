@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/HealthMonitoringSystem/HealthMonitoringSystem.iml" filepath="$PROJECT_DIR$/HealthMonitoringSystem/HealthMonitoringSystem.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/SENG-4130-Project.iml" filepath="$PROJECT_DIR$/.idea/SENG-4130-Project.iml" />
     </modules>
   </component>

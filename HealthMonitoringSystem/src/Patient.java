@@ -1,4 +1,4 @@
-public class Patient {
+public class Patient{
     SensorData sensorData;
     CurrentHeartRateObserver currentHeartRateObserver;
     CurrentTempObserver currentTempObserver;
@@ -34,5 +34,9 @@ public class Patient {
 
     public void DisplayPatientInfo(){
         System.out.println(FirstName+" "+LastName+"\n"+PatientID);
+    }
+    public void DisplayPatientCondition(){
+        DisplayPatientInfo();
+        sensorData.notifyObservers();
     }
 }

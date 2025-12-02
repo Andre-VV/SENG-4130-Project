@@ -33,4 +33,15 @@ public class SensorData implements Subject{
         this.airFlow = airFlow;
         measurmentsChanged();
     }
+
+    public int getAirFlow() {
+        return airFlow;
+    }
+    public int getHeartRate() {
+        return heartRate;
+    }
+    public int getTemperature() {
+        return temperature;
+    }
+
 }

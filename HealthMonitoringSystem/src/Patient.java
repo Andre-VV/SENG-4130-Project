@@ -1,9 +1,16 @@
 public class Patient{
     SensorData sensorData;
+    /*
     CurrentHeartRateObserver currentHeartRateObserver;
     CurrentTempObserver currentTempObserver;
     CurrentAirFlowObserver currentAirFlowObserver;
 
+     */
+    Observer currentHeartRateObserver;
+    Observer currentTempObserver;
+    Observer currentAirFlowObserver;
+
+    UnifiedObserverFactory factory = new UnifiedObserverFactory();
     String FirstName;
     String LastName;
     String PatientID;
@@ -13,9 +20,9 @@ public class Patient{
         this.LastName = LastName;
         this.PatientID = PatientID;
         sensorData = new SensorData();
-        currentHeartRateObserver = new CurrentHeartRateObserver(sensorData);
-        currentTempObserver = new CurrentTempObserver(sensorData);
-        currentAirFlowObserver = new CurrentAirFlowObserver(sensorData);
+        currentHeartRateObserver = factory.createObserver("heartrate",sensorData);
+        currentAirFlowObserver = factory.createObserver("airflow",sensorData);
+        currentTempObserver = factory.createObserver("temp",sensorData);
     }
 
     public String getFirstName() {

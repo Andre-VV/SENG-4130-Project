@@ -1,1 +1,1 @@
-add a security proxy inbetween diplay and observer
+add a factory for observers
